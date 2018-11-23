@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta property="og:title" content="Westrum Typology" />
+    <meta property="og:description" content="What characteristics does your organization have? A resource for learning about the characteristics of your organization's culture." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" value="Westrum Typology" />
+    <meta name="twitter:description" value="What characteristics does your organization have? A resource for learning about the characteristics of your organization's culture." />
+
+    <title>Westrum Typology</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Twitter Bootstrap: Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Twitter Bootstrap: Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+</head>
+
+<body id="home">
+    <div class="container-fluid">
+	<div class="page-header">
+	    <h1>Westrum Typology Culture <small>What characteristics does your organization have?</small></h1>
+	</div>
+	    <div class="panel panel-default">
+		<div class="panel-heading" role="tab" id="simpleHeading">
+		    <h4 class="panel-title">
+			<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSimple" aria-expanded="true" aria-controls="collapseSimple">
+			<span class="caret"></span> Westrum Typology Cheat Sheet: Simple
+			</a>
+		    </h4>
+		</div>
+		<div id="collapseDoctrine" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="simpleHeading">
+		    <div class="panel-body">
+			<p class="lead">What characteristics does your organization have?</p>
+			<p>Select cells to highlight them as you think, discuss, and challenge assumptions. In this section, you can click multiple times to progress through colors indicating a neutral, warning, weak, and good status.</p>
+			<table class="table table-hover table-responsive table-markable table-rotated-markable">
+			  <thead>
+			    <tr>
+			      <th class="bg-danger">Pathological (power-oriented)</th>
+			      <th class="bg-warning">Bureaucratic (rule-oriented)</th>
+			      <th class="bg-success">Generative (performance-oriented)</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Low cooperation</td>
+			      <td>Modest cooperation</td>
+			      <td>High cooperation</td>
+			    </tr>
+
+			    <tr>
+			      <td>Messengers shot</td>
+			      <td>Messengers neglected</td>
+			      <td>Messengers trained</td>
+			    </tr>
+
+			    <tr>
+			      <td>Responsibilities shirked</td>
+			      <td>Narrow responsibilities</td>
+			      <td>Risks are shared</td>
+			    </tr>
+
+			    <tr>
+			      <td>Bridging discouraged</td>
+			      <td>Bridging tolerated</td>
+			      <td>Bridging encouraged</td>
+			    </tr>
+
+			    <tr>
+			      <td>Failure leads to scapegoating</td>
+			      <td>Failure leads to justice</td>
+			      <td>Failure leads to enquiry</td>
+			    </tr>
+
+			    <tr>
+			      <td>Novelty crushed</td>
+			      <td>Novelty leads to problems</td>
+			      <td>Novelty implemented</td>
+			    </tr>
+			  </tbody>
+			</table>
+		    </div>
+		</div>
+	    </div>
+	    </div>
+	<a href="https://github.com/mwfogleman/westrum-typology" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js" ></script>
+    <script>
+	window.onload = function(){
+	    $(".table-markable tbody td").on("click", function(e) {
+		if (!$(this).hasClass("heading")) {
+		    $(this).toggleClass("info");
+		}
+	    });
+	    $(".table-rotated-markable tbody td").on("click", function(e) {
+		if (!$(this).hasClass("heading")) {
+		    if($(this).hasClass("danger")) {
+			$(this).toggleClass("danger");
+			$(this).toggleClass("warning");
+		    } else if($(this).hasClass("warning")) {
+			$(this).toggleClass("warning");
+			$(this).toggleClass("success");
+		    } else if($(this).hasClass("success")) {
+			$(this).toggleClass("success");
+		    } else {
+			$(this).toggleClass("danger");
+		    }
+		}
+	    });
+	};
+    </script>
+</body>
+</html>
