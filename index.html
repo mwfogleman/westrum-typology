@@ -100,10 +100,16 @@
 			if (!$(this).hasClass("heading")) {
 				if($(this).closest('table').find('th').eq($(this).index()).hasClass("bg-danger")) {
 					$(this).toggleClass("danger");
+					$(this).next().removeClass("warning");
+					$(this).next().next().removeClass("success");
 				} else if($(this).closest('table').find('th').eq($(this).index()).hasClass("bg-warning")) {
 					$(this).toggleClass("warning");
+					$(this).prev().removeClass("danger");
+					$(this).next().removeClass("success");
 				} else if($(this).closest('table').find('th').eq($(this).index()).hasClass("bg-success")) {
 					$(this).toggleClass("success");
+					$(this).prev().prev().removeClass("danger");
+					$(this).prev().removeClass("warning");
 				}
 			}
 	    });
